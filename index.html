@@ -77,7 +77,7 @@
 </head>
 <body>
     <h1>horas junto a mi nena</h1>
-    <p id="contador">5164</p>
+    <p id="contador">5174</p> <!-- Valor inicial incrementado en 10 -->
 
     <div class="heart-container">
         <span class="heart">❤️</span>
@@ -86,7 +86,7 @@
     </div>
 
     <script>
-        let contador = 5164;
+        let contador = 5174; // Se incrementa el valor inicial en 10
 
         function actualizarContador() {
             document.getElementById("contador").textContent = contador;
@@ -95,7 +95,7 @@
         setInterval(function() {
             contador++;
             actualizarContador();
-        }, 3600000);
+        }, 3600000); // Actualiza cada hora
     </script>
 </body>
 </html>
