@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>horas con mi amorcito</title>
+    <style>
+        body {
+            background: linear-gradient(45deg, #ffcccc, #ffe6e6, #ffd6d6);
+            background-size: 400% 400%;
+            animation: gradient 10s ease infinite;
+            color: #ff4d4d;
+            font-family: 'Cursive', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: #ff1a1a;
+            text-shadow: 2px 2px 4px #ff8080;
+        }
+
+        #contador {
+            font-size: 4rem;
+            color: #ff6666;
+            margin: 20px 0;
+            text-shadow: 3px 3px 5px #ffb3b3;
+            animation: glow 1.5s infinite;
+        }
+
+        .heart {
+            font-size: 2rem;
+            color: #ff1a75;
+        }
+
+        .heart-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+            animation: float 5s infinite ease-in-out;
+        }
+
+        .heart-container .heart {
+            animation: pulse 1s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+
+        @keyframes glow {
+            0% { text-shadow: 0 0 10px #ff9999, 0 0 20px #ff4d4d; }
+            50% { text-shadow: 0 0 20px #ff6666, 0 0 30px #ff1a1a; }
+            100% { text-shadow: 0 0 10px #ff9999, 0 0 20px #ff4d4d; }
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0); }
+        }
+
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+    </style>
+</head>
+<body>
+    <h1>horas junto a mi nena</h1>
+    <p id="contador">5164</p>
+
+    <div class="heart-container">
+        <span class="heart">❤️</span>
+        <span class="heart">❤️</span>
+        <span class="heart">❤️</span>
+    </div>
+
+    <script>
+        let contador = 5164;
+
+        function actualizarContador() {
+            document.getElementById("contador").textContent = contador;
+        }
+
+        setInterval(function() {
+            contador++;
+            actualizarContador();
+        }, 3600000);
+    </script>
+</body>
+</html>
